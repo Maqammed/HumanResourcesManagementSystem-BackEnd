@@ -14,9 +14,10 @@ import Project.hrms.entities.concretes.JobPosition;
 @RequestMapping("/api/jobpositions")
 public class JobPositionsController {
 
+	
+	@Autowired
 	private JobPositionService jobPositionService;
 
-	@Autowired
 	public JobPositionsController(JobPositionService jobPositionService) {
 		super();
 		this.jobPositionService = jobPositionService;

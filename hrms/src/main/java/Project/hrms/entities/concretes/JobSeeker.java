@@ -3,18 +3,24 @@ package Project.hrms.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import Project.hrms.entities.abstracts.User;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity 
 @Table(name="jobSeekers")
 @Data
-public class JobSeeker { 
+public class JobSeeker  extends User{ 
 
 	@Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
 	private int id;
 	
@@ -34,17 +40,5 @@ public class JobSeeker {
 	private int birthYear;
 
 	
-	public JobSeeker() {}
-	
-	public JobSeeker(int id, int userId, String firstName, String lastName, String identificationNumber,
-			int birthYear) {
-		super();
-		this.id = id;
-		this.userId = userId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.identificationNumber = identificationNumber;
-		this.birthYear = birthYear;
-	}
 
 }

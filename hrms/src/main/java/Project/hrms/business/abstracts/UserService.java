@@ -2,8 +2,11 @@ package Project.hrms.business.abstracts;
 
 import java.util.List;
 
-import Project.hrms.entities.concretes.User;
+import Project.hrms.core.utilities.results.DataResult;
+import Project.hrms.core.utilities.results.Result;
+import Project.hrms.entities.abstracts.User;
 
 public interface UserService {
-	List<User> getAll();
+	DataResult<List<User>> getAll();
+	Result add(User user); 
 }

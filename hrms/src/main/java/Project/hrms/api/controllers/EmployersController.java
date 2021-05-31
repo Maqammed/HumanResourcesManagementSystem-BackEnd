@@ -14,9 +14,10 @@ import Project.hrms.entities.concretes.Employer;
 @RequestMapping("/api/employers")
 public class EmployersController {
 
-	private EmployerService employerService;
 
 	@Autowired
+	private EmployerService employerService;
+
 	public EmployersController(EmployerService employerService) {
 		super();
 		this.employerService = employerService;

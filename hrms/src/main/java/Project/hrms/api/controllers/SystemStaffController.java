@@ -14,9 +14,10 @@ import Project.hrms.entities.concretes.SystemStaff;
 @RequestMapping("/api/systemstaffcontrollers")
 public class SystemStaffController {
 	
-	private SystemStaffService systemStaffService;
 
 	@Autowired
+	private SystemStaffService systemStaffService;
+
 	public SystemStaffController(SystemStaffService systemStaffService) {
 		super();
 		this.systemStaffService = systemStaffService;
